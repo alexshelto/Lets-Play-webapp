@@ -20,7 +20,7 @@ def load_user(user_id):
 #User database model:
 class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)                                #Each user is given a unique id number
-    name = db.Column(db.String(30), unique=True, nullable=False)                #User's full name
+    name = db.Column(db.String(30),  nullable=False)                #User's full name
     username = db.Column(db.String(20), unique=True, nullable=False)            #Each user will be able to create a unique username of length 20
     email = db.Column(db.String(120), unique=True, nullable=False)              #Every user will need to register with an email address (maybe?)
     image_file = db.Column(db.String(20), nullable=False, default='default.jpg')#Each user has a profile pic. uploaded or default
