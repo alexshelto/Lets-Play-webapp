@@ -19,3 +19,7 @@ Games can be pickup basketball, videogames, and dungeons and dragons.
 	* Frontend templating
 * sqlite
 	* Database
+
+
+### Plans for final project
+We are planning on hosting this web app on a website to allow people to access it via smartphone / computer
