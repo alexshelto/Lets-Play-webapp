@@ -1,7 +1,7 @@
 # Lets Play Web Application
 
 ## Developers
-* Alexander Shelton @alexshelto | ##### Maintainer
+* Alexander Shelton @alexshelto | <h2> Maintainer <\h2>
 * Ben Bauer @benjaminxbauer
 * AJ Stein @AJStein51
 * Hunter Burden @HunterBurden
