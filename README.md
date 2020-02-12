@@ -6,6 +6,11 @@
 * AJ Stein @AJStein51
 * Hunter Burden @HunterBurden
 
+## Roles
+Alex: Team Lead (float)
+Ben and Hunter: Back End
+AJ: Front End
+
 ## Project Description
 This is a webapp that allows users to find group members for different games.
 Games can be pickup basketball, videogames, and dungeons and dragons.
