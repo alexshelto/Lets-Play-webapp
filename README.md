@@ -14,17 +14,6 @@ Games can be pickup basketball, videogames, and dungeons and dragons.
 * sqlite
 	* Database
 	
-## Plans for final project
-We are planning on hosting this web app on a website to allow people to access it via smartphone / computer
-
-
-# Documentation table of contents
-- [Developers](#developers)
-  * [Roles](#roles)
-- [Installing](#installing-dependencies)
-- [Running Locally](#running-locally)
-
-
 ## Developers
 * Alexander Shelton @alexshelto
 * Ben Bauer @benjaminxbauer
@@ -36,12 +25,22 @@ Alex: Team Lead (float)
 Ben and Hunter: Back End
 AJ: Front End
 
+## Plans for final project
+We are planning on hosting this web app on a website to allow people to access it via smartphone / computer
+
+
+# Documentation table of contents
+- [Installing](#installing-dependencies)
+- [Running Locally](#running-locally)
+
+
+
 
 
 ## Installing dependencies
-It is highlt recomended to use a virtual machine for python
-https://virtualenv.pypa.io/en/latest/
-https://docs.python.org/3/tutorial/venv.html
+It is highlt recomended to use a virtual machine for python  
+https://virtualenv.pypa.io/en/latest/  
+https://docs.python.org/3/tutorial/venv.html  
 
 Make sure you are using python 3.x  
 Activate virtual machine
