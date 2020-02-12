@@ -1,28 +1,5 @@
 # Lets Play Web Application
 
-# Table of contents
-- [Developers](#developers)
-  * [Roles](#roles)
-- [Project Description](#project-description)
-  * [Tools](#tools)
-  * [Project Plans](#plans-for-final-project)
-- [Installing](#installing-dependencies)
-- [Running Locally](#running-locally)
-
-
-
-
-## Developers
-* Alexander Shelton @alexshelto
-* Ben Bauer @benjaminxbauer
-* AJ Stein @AJStein51
-* Hunter Burden @HunterBurden
-
-## Roles
-Alex: Team Lead (float)
-Ben and Hunter: Back End
-AJ: Front End
-
 ## Project Description
 This is a webapp that allows users to find group members for different games.
 Games can be pickup basketball, videogames, and dungeons and dragons.
@@ -39,6 +16,26 @@ Games can be pickup basketball, videogames, and dungeons and dragons.
 	
 ## Plans for final project
 We are planning on hosting this web app on a website to allow people to access it via smartphone / computer
+
+
+# Documentation table of contents
+- [Developers](#developers)
+  * [Roles](#roles)
+- [Installing](#installing-dependencies)
+- [Running Locally](#running-locally)
+
+
+## Developers
+* Alexander Shelton @alexshelto
+* Ben Bauer @benjaminxbauer
+* AJ Stein @AJStein51
+* Hunter Burden @HunterBurden
+
+## Roles
+Alex: Team Lead (float)
+Ben and Hunter: Back End
+AJ: Front End
+
 
 
 ## Installing dependencies
