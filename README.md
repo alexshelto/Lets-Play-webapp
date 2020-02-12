@@ -30,6 +30,7 @@ We are planning on hosting this web app on a website to allow people to access i
 
 
 # Documentation table of contents
+- [Virtual Machines](#virtual-machine)
 - [Installing](#installing-dependencies)
 - [Running Locally](#running-locally)
 
