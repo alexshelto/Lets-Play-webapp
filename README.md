@@ -43,9 +43,10 @@ We are planning on hosting this web app on a website to allow people to access i
 
 ## Installing dependencies
 It is highlt recomended to use a virtual machine for python
-(put links for virtual env)
+https://virtualenv.pypa.io/en/latest/
+https://docs.python.org/3/tutorial/venv.html
 
-Make sure you are using python 3.x
+Make sure you are using python 3.x  
 Activate virtual machine
 ```shell
 cd Lets-Play-webapp
