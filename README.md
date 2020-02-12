@@ -42,22 +42,22 @@ We are planning on hosting this web app on a website to allow people to access i
 
 
 ## Installing dependencies
-> It is highlt recomended to use a virtual machine for python
+It is highlt recomended to use a virtual machine for python
 (put links for virtual env)
 
-> Make sure you are using python 3.x
-> Activate virtual machine
+Make sure you are using python 3.x
+Activate virtual machine
 ```shell
 cd Lets-Play-webapp
 pip install -r requirements.txt
 ```
 
 ## Running Locally
-> The application itself is built in the run.py file. This line will set your run.py file up as the main file
+The application itself is built in the run.py file. This line will set your run.py file up as the main file
 ```shell
 export FLASK_APP=run.py
 ```
-> When running your app locally it is recomended to be in debugger mode. To put your app in debugger mode and run the web app this line can be used.
+When running your app locally it is recomended to be in debugger mode. To put your app in debugger mode and run the web app this line can be used.
 ```shell
 FLASK_DEBUG=True flask run
 ```
