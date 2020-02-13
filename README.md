@@ -15,10 +15,10 @@ Games can be pickup basketball, videogames, and dungeons and dragons.
 	* Database
 	
 ## Developers
-* Alexander Shelton @alexshelto
-* Ben Bauer @benjaminxbauer
-* AJ Stein @AJStein51
-* Hunter Burden @HunterBurden
+* <a href="https://github.com/alexshelto">Alexander Shelton </a>  
+* <a href="https://github.com/benjaminxbauer"> Ben Bauer </a>  
+* <a href="https://github.com/ajstein51"> AJ Stein </a>  
+* <a href="https://github.com/hunterburden"> Hunter Burden </a>
 
 ## Roles
 Alex: Team Lead (float)
