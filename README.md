@@ -33,6 +33,7 @@ We are planning on hosting this web app on a website to allow people to access i
 - [Virtual Machines](#virtual-machine)
 - [Installing](#installing-dependencies)
 - [Running Locally](#running-locally)
+- [Resources](#resources)
 
 
 ## Virtual machine
