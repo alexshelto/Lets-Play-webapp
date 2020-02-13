@@ -62,5 +62,6 @@ $ FLASK_DEBUG=True flask run
 
 ## Resources
 <a href="https://flask.palletsprojects.com/en/1.1.x/quickstart/"> Flask Doccumentation </a>
-
+<a href="https://flask.palletsprojects.com/en/1.1.x/quickstart/#routing" Flask Routing </a>
+<a href="https://flask-sqlalchemy.palletsprojects.com/en/2.x/quickstart/" Flask with SQLAlchemy </a>
 
