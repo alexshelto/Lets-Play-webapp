@@ -45,18 +45,18 @@ https://docs.python.org/3/library/venv.html
 Make sure you are using python 3.x  
 Activate virtual machine
 ```shell
-cd Lets-Play-webapp
-pip install -r requirements.txt
+$ cd Lets-Play-webapp
+$ pip install -r requirements.txt
 ```
 
 ## Running Locally
 The application itself is built in the run.py file. This line will set your run.py file up as the main file
 ```shell
-export FLASK_APP=run.py
+$ export FLASK_APP=run.py
 ```
 When running your app locally it is recomended to be in debugger mode. To put your app in debugger mode and run the web app this line can be used.
 ```shell
-FLASK_DEBUG=True flask run
+$ FLASK_DEBUG=True flask run
 ```
 
 
