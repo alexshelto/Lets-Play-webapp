@@ -59,4 +59,7 @@ When running your app locally it is recomended to be in debugger mode. To put yo
 $ FLASK_DEBUG=True flask run
 ```
 
+## Resources
+<a href="https://flask.palletsprojects.com/en/1.1.x/quickstart/"> Flask Doccumentation </a>
+
 
