@@ -4,6 +4,13 @@
 # USER and POST tables
 
 
+
+#TODO: Post model, game id. it will be chosen from select list not inputted
+#TODO: __repr__ functions for both models need to be tailored to sites idea once at that stage
+
+
+
+
 from datetime import datetime
 from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
 from flask import current_app
@@ -40,3 +47,14 @@ class User(db.Model, UserMixin):
         return f"User('{self.username}', '{self.email}', '{self.image_file}')"
 
     ############################################################################
+
+class Post(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    game = db.Column(db.String(100),nullable=False ) #Change to entered from menu on form
+    date_posted = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
+    content = db.Column(db.Text, nullable=False)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+
+    #How uPost is displayed
+    def __repr__(self):
+    return f"Post('{self.title}', '{self.date_posted}')"
