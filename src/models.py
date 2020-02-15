@@ -7,6 +7,7 @@
 
 #TODO: Post model, game id. it will be chosen from select list not inputted
 #TODO: __repr__ functions for both models need to be tailored to sites idea once at that stage
+#If name is optional. remove nullable from User class for 'first_name' and 'last_name'
 
 
 
@@ -27,7 +28,8 @@ def load_user(user_id):
 #User database model:
 class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)                                #Each user is given a unique id number
-    name = db.Column(db.String(30),  nullable=False)                #User's full name
+    first_name = db.Column(db.String(30),  nullable=False)                
+    last_name = db.Column(db.String(30), nullable=False)
     username = db.Column(db.String(20), unique=True, nullable=False)            #Each user will be able to create a unique username of length 20
     email = db.Column(db.String(120), unique=True, nullable=False)              #Every user will need to register with an email address (maybe?)
     image_file = db.Column(db.String(20), nullable=False, default='default.jpg')#Each user has a profile pic. uploaded or default
@@ -57,4 +59,4 @@ class Post(db.Model):
 
     #How uPost is displayed
     def __repr__(self):
-    return f"Post('{self.title}', '{self.date_posted}')"
+        return f"Post('{self.game}', '{self.date_posted}')"
