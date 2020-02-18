@@ -57,6 +57,6 @@ class Post(db.Model):
     content = db.Column(db.Text, nullable=False)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
 
-    #How uPost is displayed
+    #How Post is displayed
     def __repr__(self):
         return f"Post('{self.game}', '{self.date_posted}')"
