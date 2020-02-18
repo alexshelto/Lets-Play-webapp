@@ -39,10 +39,22 @@ class User(db.Model, UserMixin):
     #User class methods:
     ############################################################################
     #Reset token class method
-    @staticmethod #not taking selt in methodS
+
     def get_reset_token(self, expires_sec=1800):
         s = Serializer(current_app.config['SECRET_KEY'], expires_sec)
         return s.dumps({'user_id': self.id}).decode('utf-8')
+
+
+
+    @staticmethod #not taking selt in methodS
+    def verify_reset_token(token):
+        s = Serializer(current_app.config['SECRET_KEY'])
+        try:
+            user_id = s.loads(token)['user_id']
+        except:
+            return None
+        return User.query.get(user_id)
+
 
     #how User is represented
     def __repr__(self):
