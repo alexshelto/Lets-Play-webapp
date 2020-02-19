@@ -7,6 +7,7 @@
 
 #TODO: Post model, game id. it will be chosen from select list not inputted
 #TODO: __repr__ functions for both models need to be tailored to sites idea once at that stage
+#If name is optional. remove nullable from User class for 'first_name' and 'last_name'
 
 
 
@@ -25,6 +26,7 @@ def load_user(user_id):
     return User.query.get(int(user_id))
 
 
+<<<<<<< HEAD
 
 #User database model:
 # Creates the object that gets inserted into the database
@@ -76,3 +78,5 @@ class Post(db.Model):
     #How uPost is displayed
     def __repr__(self):
         return f"Post('{self.title}', '{self.date_posted}')"
+=======
+>>>>>>> origin/master
