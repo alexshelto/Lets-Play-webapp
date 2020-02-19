@@ -18,6 +18,10 @@ class RegistrationForm(FlaskForm):
             validators=[DataRequired(), Length(min = 4, max=18)])##sets validators for username length
     email = StringField('Email',
             validators=[DataRequired(),Email()])
+
+    zipcode = StringField('Zipcode',
+            validators=[DataRequired(), Length(min=5, max=5)]) #Sets all zipcodes to be of length 5 only
+
     password = PasswordField('Password', validators=[DataRequired()])
     confirm_password = PasswordField('Confirm Password',
              validators=[DataRequired(), EqualTo('password')])

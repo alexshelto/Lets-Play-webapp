@@ -7,7 +7,6 @@
                 <legend class="border-bottom mb-4">Welcome new users!</legend>
                 <div class="form-group">
                      {{ form.username.label(class="form-control-label") }}
-
                     {% if form.username.errors %}
                         {{ form.username(class="form-control form-control-lg is-invalid") }}
                         <div class="invalid-feedback">
@@ -32,6 +31,22 @@
                         {{ form.email(class="form-control form-control-lg") }}
                     {% endif %}
                 </div>
+
+                <div class="form-group">
+                    {{ form.zipcode.label(class="form-control-label") }}
+                    {% if form.zipcode.errors %}
+                        {{ form.zipcode(class="form-control form-control-lg is-invalid") }}    
+                        <div class="invalid-feedback">
+                            {% for error in form.zipcode.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.zipcode(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+
+
                 <div class="form-group">
                     {{ form.password.label(class="form-control-label") }}
                     {% if form.password.errors %}
@@ -40,11 +55,14 @@
                             {% for error in form.password.errors %}
                                 <span>{{ error }}</span>
                             {% endfor %}
-                        </div>
+                        </di   v>
                     {% else %}
                         {{ form.password(class="form-control form-control-lg") }}
                     {% endif %}
                 </div>
+
+
+
                 <div class="form-group">
                     {{ form.confirm_password.label(class="form-control-label") }}
                     {% if form.confirm_password.errors %}
@@ -58,6 +76,11 @@
                         {{ form.confirm_password(class="form-control form-control-lg") }}
                     {% endif %}
                 </div>
+
+
+
+
+
             </fieldset>
             <div class="form-group">
                 {{ form.submit(class="btn btn-outline-info") }}
