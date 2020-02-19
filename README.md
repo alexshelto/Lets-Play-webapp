@@ -11,7 +11,7 @@ Games can be pickup basketball, videogames, and dungeons and dragons.
 	* Code repository
 * Jinja
 	* Frontend templating
-* sqlite
+* sqlAlchemy
 	* Database
 	
 ## Developers
