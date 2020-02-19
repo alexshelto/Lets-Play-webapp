@@ -7,6 +7,7 @@
 
 #TODO: Post model, game id. it will be chosen from select list not inputted
 #TODO: __repr__ functions for both models need to be tailored to sites idea once at that stage
+#If name is optional. remove nullable from User class for 'first_name' and 'last_name'
 
 
 
