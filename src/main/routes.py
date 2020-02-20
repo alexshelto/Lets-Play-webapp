@@ -26,6 +26,6 @@ main = Blueprint('main', __name__)
 def home():
     return render_template('home.html')
 
-@about.route('/about')
+@main.route('/about')
 def about():
     return render_template('about.html')
