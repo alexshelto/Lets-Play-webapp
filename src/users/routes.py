@@ -5,7 +5,7 @@
 from flask import render_template, url_for, flash, redirect, request, Blueprint
 from flask_login import login_user, current_user, logout_user, login_required
 from src import db, bcrypt
-from src.models import User
+from src.models import User, Post
 from src.users.forms import RegistrationForm, LoginForm
 from src.users.utils import save_picture
 
@@ -87,3 +87,19 @@ def logout():
 @login_required
 def account():
     return render_template("account.html")
+
+
+
+
+
+
+##user post page route
+## This is where we can create a profile page
+@users.route("/user/<string:username>")
+def user_page(username):
+    page = request.args.get('page',1, type=int)
+    user = User.query.filter_by(username=username).first_or_404()
+    posts = Post.query.filter_by(author=user)\
+        .order_by(Post.date_posted.desc())\
+        .paginate(page=page,per_page=10)##posts per page:
+    return render_template('user_page.html',posts=posts, user=user)
