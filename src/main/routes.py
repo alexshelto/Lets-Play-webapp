@@ -34,6 +34,6 @@ def home():
 def about():
     return render_template('about.html')
 
-@main.route('/contact us')
+@main.route('/contact_us')
 def contact_us():
     return render_template('contact_us.html')
