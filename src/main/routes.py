@@ -33,3 +33,7 @@ def home():
 @main.route('/about')
 def about():
     return render_template('about.html')
+
+@main.route('/contact us')
+def contact_us():
+    return render_template('contact_us.html')
