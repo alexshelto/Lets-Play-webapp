@@ -26,7 +26,6 @@ def load_user(user_id):
     return User.query.get(int(user_id))
 
 
-<<<<<<< HEAD
 
 #User database model:
 # Creates the object that gets inserted into the database
@@ -78,5 +77,3 @@ class Post(db.Model):
     #How uPost is displayed
     def __repr__(self):
         return f"Post('{self.title}', '{self.date_posted}')"
-=======
->>>>>>> origin/master
