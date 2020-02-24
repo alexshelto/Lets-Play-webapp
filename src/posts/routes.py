@@ -10,14 +10,12 @@
 from flask import render_template, request, Blueprint, flash, redirect, url_for
 from flask_login import login_user, current_user, logout_user, login_required
 from datetime import datetime
-
 from src import db
 from src.models import Post
-from src.posts.forms import PostForm
+from src.posts.forms import PostForm, Game_Choices #importing the post form and the available game choices 
 # querying
 import sqlite3
 from sqlite3 import Error
-
 
 
 #Creating a blueprint instance
@@ -28,14 +26,35 @@ posts = Blueprint('posts', __name__)
 @posts.route("/post/new", methods=['GET','POST'])
 @login_required #user must be loged in to post
 def new_post():
+    #Creating list of available games to make a post for:
     form = PostForm()
-    if form.validate_on_submit():
-        post = Post(title=form.title.data, content=form.content.data, author=current_user)
+    
+
+
+
+    # #If form is sent
+    # if form.validate() and request.method == 'POST':
+   
+
+    if request.method == 'POST' and form.validate():
+       
+        game = dict(form.game.choices).get(form.game.data)
+        #Create a new post object with the information from the form
+        post = Post(title=form.title.data, content=form.content.data, author=current_user, game=game)
+
+        #Commit the post to the post db
         db.session.add(post)
         db.session.commit()
+        print("added to database")
         flash('Your post has been created', 'success')
         return redirect(url_for('main.home'))
-    return render_template('create_post.html', title='New Post', form=form, legend="New Post")
+
+    return render_template('create_post.html', title='New Post', form=form, legend="New Post", games=Game_Choices) #removed games=game_display
+
+
+
+
+
 
 
 
