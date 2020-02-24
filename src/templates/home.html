@@ -9,6 +9,7 @@
                 <a class="mr-2" href="{{url_for('users.user_page', username=post.author.username) }}">{{ post.author.username }}</a>
                 <small class="text-muted">{{ post.date_posted.strftime('%Y-%m-%d') }}</small>
               </div>
+              <h1> {{ post.game }}</h1>
               <h2><a class="article-title" href="{{url_for('posts.post', post_id=post.id )}}">{{ post.title }}</a></h2>
               <p class="article-content">{{ post.content }}</p>
             </div>
