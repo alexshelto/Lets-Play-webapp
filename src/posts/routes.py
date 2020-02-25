@@ -31,21 +31,17 @@ def new_post():
     
 
 
-
-    # #If form is sent
-    # if form.validate() and request.method == 'POST':
-   
-
     if request.method == 'POST' and form.validate():
-       
-        game = dict(form.game.choices).get(form.game.data)
-        #Create a new post object with the information from the form
-        post = Post(title=form.title.data, content=form.content.data, author=current_user, game=game)
+        # 
+        # Retrieves the value for game selected creates a new post form
+        # Add and commit new post form to database
 
+        game = dict(form.game.choices).get(form.game.data)
+        post = Post(title=form.title.data, content=form.content.data, author=current_user, game=game)
         #Commit the post to the post db
         db.session.add(post)
         db.session.commit()
-        print("added to database")
+        
         flash('Your post has been created', 'success')
         return redirect(url_for('main.home'))
 
