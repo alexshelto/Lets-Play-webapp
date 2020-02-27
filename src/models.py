@@ -69,7 +69,8 @@ class User(db.Model, UserMixin):
 #
 class Post(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    game = db.Column(db.String(100),nullable=False ) #Change to entered from menu on form
+    title = db.Column(db.String(25), nullable=False)  #optional title to post
+    game = db.Column(db.String(100),nullable=True ) #Change to entered from menu on form
     date_posted = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
     content = db.Column(db.Text, nullable=False)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)

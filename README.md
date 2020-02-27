@@ -59,6 +59,13 @@ When running your app locally it is recomended to be in debugger mode. To put yo
 ```shell
 $ FLASK_DEBUG=True flask run
 ```
+Windows Command Prompt:
+```
+C:\your\path>set FLASK_APP=run.py
+set FLASK_DEBUG=True flask run
+```
+
+
 
 ## Resources
 <a href="https://flask.palletsprojects.com/en/1.1.x/quickstart/"> Flask Doccumentation </a>  
