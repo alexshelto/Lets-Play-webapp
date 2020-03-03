@@ -1,28 +1,38 @@
-January 28, 2019
+January 28, 2020
     Team NaiveMonster conisting of Alex Shelton, Hunter Burden, Ben Bauer, and AJ stein was formed. We decided on an idea, being that we would create a website
     where people could find those interesting in similar activites to them and plan and make groups for them.
 
-Febraury 4, 2019
+Febraury 4, 2020
     The group repo was created by Alex Shelton. The rest of group was added and meeting times were discussed. Tuesdays at 6 and Saturdays at 3 were decided. Initial
     task such as Alex, AJ, and Ben editing the README and Hunter deleting the __pycache__ files were doled out.
 
-February 11, 2019
+February 11, 2020
     Alex set up the repository and most of the intial files such as main. We discussed how to build the virtual enironment and made it homework to build it by Saturday.
 
-February 15, 2019
+February 15, 2020
     After we had all set up our virtual enironments we mostly discussed what we wanted in for our website. Discussions included what pages we think would be best,
     such as an about us and contact us, and how we would desire people to use the app. Login requries and emial to signup, with users creating a username and 
     password, as well as entering their location and a bio to help them find people. To find people it was decided that users would make posts similar to Twitter
     where users make "posts" with the activty, a description, date, and duration of actvity.
 
-February 18, 2019
+February 18, 2020
     Plans for the future and more roles are decided. Ben makes the about_us page, Hunter creates the contact_us, AJ works on various front end HTML pages, and Alex
     works on the posts and how they are created and intereact with other pages.
 
-Febraury 22, 2019
+Febraury 22, 2020
     Hunter Burden was out of town at RevolutionUC so it was decided to simply wait until Tuesday and have everyone due their tasks.
 
-February 24, 2019
-    After working on the Doxygen homework,  Due to other classes we mostly agreed to do simple tasks such as update our about us pages and remove any
+February 25, 2020
+    After working on the Doxygen homework, Due to other classes we mostly agreed to do simple tasks such as update our about us pages and remove any
     unessecary branches, so that everyone could focus.
+
+Febraury 28, 2020
+    Most of the discussion was based around the color scheme we would be using for the website. We decided it would be colors in our CSS styling and we also discussed
+    who would be taking what files and formatting them. 
+
+March 3, 2020
+    It was discussed that we would all take the time to learn HTML and CSS formatting and styling in order to make the website look pleasing and usable. We have all
+    decided to take various pages. Alex will take the main page, Ben will take the about us page, Hunter will work on contact us, and AJ will work on the login.
+    The deicded color scheme will include mainly purple and black. Some other potential supporting colors such as white, red, and blue could be used in smaller
+    amounts to create a little diversity.
     
