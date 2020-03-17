@@ -37,7 +37,7 @@ We are planning on hosting this web app on a website to allow people to access i
 
 
 ## Virtual enviornment
-It is highlt recomended to use a virtual machine for python  
+It is highly recomended to use a virtual machine for python  
 https://virtualenv.pypa.io/en/latest/  
 https://docs.python.org/3/tutorial/venv.html  
 https://docs.python.org/3/library/venv.html   
