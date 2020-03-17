@@ -30,13 +30,13 @@ We are planning on hosting this web app on a website to allow people to access i
 
 
 # Documentation table of contents
-- [Virtual Machines](#virtual-machine)
+- [Virtual Enviornment](#virtual-enviornment)
 - [Installing](#installing-dependencies)
 - [Running Locally](#running-locally)
 - [Resources](#resources)
 
 
-## Virtual machine
+## Virtual enviornment
 It is highlt recomended to use a virtual machine for python  
 https://virtualenv.pypa.io/en/latest/  
 https://docs.python.org/3/tutorial/venv.html  
