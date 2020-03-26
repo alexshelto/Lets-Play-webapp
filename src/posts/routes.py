@@ -2,8 +2,7 @@
 # File is responsible for handling the requests to the url and loading the correct page
 # Dealing with urls that have to do with creating/accessing posts
 #
-#
-#
+
 
 
 

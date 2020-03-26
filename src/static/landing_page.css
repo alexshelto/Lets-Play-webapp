@@ -16,7 +16,7 @@
   /* Control the left side */
   .left {
     left: 0;
-    background-color: #50d8d7;
+    background-color: rgb(80,216,215)
   }
   
   /* Control the right side */
@@ -52,33 +52,7 @@
 
 
 
-  /* a {
-    padding: 0;
-    border: none;
-    font: inherit;
-    color: inherit;
-    background-color: transparent;
-    cursor: pointer;
-  } */
-  
-  /* button:focus {
-    outline: 0;
-  }
-
-  button {
-    padding: 10px 20px;
-    outline: 1px dotted black;
-  }
-
-
   .login-register-button{
-    background-color: #50d8d7;
-    border-radius: 20px;
-  }  */
-
-  .login-register-button{
-
-
 
     font: bold 20px Arial;
     text-decoration: none;
