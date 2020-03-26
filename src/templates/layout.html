@@ -35,17 +35,16 @@
             <div class="container">
 
             <!-- Left side nav shows app name -->
-            <a class="navbar-brand mr-4" href="{{ url_for('main.home')}}">Lets Play</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <a class="nav-bar-title" href="{{ url_for('main.home')}}">Lets Play</a>
+         
 
 
               <!-- Top nav bar html -->
             <div class="collapse navbar-collapse" id="navbarToggle">
                 <div class="navbar-nav mr-auto">
                 {% if current_user.is_authenticated %}
-                  <a class="nav-item nav-link" href="{{ url_for('posts.new_post') }}">New Post</a>
+
+                  <a class="nav-bar-item" href="{{ url_for('posts.new_post') }}">New Post </a>
                 {% endif %}
             
 
@@ -54,11 +53,11 @@
 
                 <div class="navbar-nav">
                 {% if current_user.is_authenticated %}
-                <a class="nav-item nav-link" href="{{ url_for('users.logout') }}">Logout</a>
-                <a class="nav-item nav-link" href="{{ url_for('users.account') }}">Account</a>
+                <a class="nav-bar-item" href="{{ url_for('users.logout') }}">Logout</a>
+                <a class="nav-bar-item" href="{{ url_for('users.account') }}">Account</a>
                 {% else %}
-                    <a class="nav-item nav-link" href="{{ url_for('users.login') }}">Login</a>
-                    <a class="nav-item nav-link" href="{{ url_for('users.register') }}">Register</a>
+                    <a class="nav-bar-item" href="{{ url_for('users.login') }}">Login</a>
+                    <a class="nav-bar-item" href="{{ url_for('users.register') }}">Register</a>
                 {% endif %}
                 </div>
             </div>
