@@ -36,7 +36,10 @@
 
             <!-- Left side nav shows app name -->
             <a class="nav-bar-title" href="{{ url_for('main.home')}}">Lets Play</a>
-         
+            <!-- dropdown nav bar if screen dimensions change -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
 
 
               <!-- Top nav bar html -->
@@ -61,19 +64,29 @@
                 {% endif %}
                 </div>
             </div>
-
-
-
             </div>
         </nav>
         </header>
 
-        <main role="main" class="container">
-                <div class="col-md-8">
-                  <!-- Where the other template pages extens inside of -->
-                {% block content %}{% endblock %} 
-              </div>
-            </main>
+       
+            <main role="main" class="container">
+              <div class="row">
+                  <div class="col-md-8">
+                  {% with messages = get_flashed_messages(with_categories=true) %}
+                      {% if messages %}
+                          {% for catagory, message in messages %}
+                          <div class="alert alert-{{ catagory }}">
+                              {{ message }}
+                          </div>
+                          {% endfor %}
+                      {% endif %}
+                  {% endwith %}
+
+                  {% block content %}{% endblock %}
+                  </div> 
+              </div> <!-- end content-->
+
+              </main> <!-- end wrapper-->
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
