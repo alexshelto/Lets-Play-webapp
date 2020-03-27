@@ -1,11 +1,21 @@
 {% extends "layout.html" %}
 {% block content %}
 
+<div class="profile content-section">
+  <img class="rounded-circle article-img" src="{{ url_for('static', filename='profile_pics/' + current_user.image_file) }}">
 
-<p>
-  This is your account page
-  </p>
+  <div class="profile-details-block">
+    <div class="profile-detail">
+      <h4> {{ current_user.firstname }} {{ current_user.last_name }}</h4>
+    </div>
 
+  </div>
+
+
+
+
+
+</div>
 
 
 
