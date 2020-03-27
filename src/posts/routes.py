@@ -57,3 +57,19 @@ def new_post():
 def post(post_id):
     post = Post.query.get_or_404(post_id)
     return render_template('post.html', title=post.title, post=post)
+
+
+
+
+# Route allows users to delete a post that they created
+#
+@posts.route("/post/<int:post_id>/delete", methods=['POST'])
+@login_required #need to be logged in to update a post
+def delete_post(post_id):
+    post = Post.query.get_or_404(post_id)
+    if post.author != current_user:
+       abort(403)
+    db.session.delete(post)
+    db.session.commit()
+    flash('Your post has been deleted!', 'success')
+    return redirect(url_for('main.home'))

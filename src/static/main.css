@@ -6,8 +6,8 @@ body {
   }
 
 
-  h1, h2, h3, h4, h5, h6 {
-    color: #444444;
+  h1, h2, h3, h4, h5, h6, p {
+    color: #ffffff;
   }
 
   .bg-steel {
@@ -25,6 +25,9 @@ body {
   .site-header .navbar-nav .nav-link.active {
     font-weight: 500;
   } */
+
+
+
 
   .nav-bar-title, .nav-bar-title:hover {
     color: #152128;
@@ -55,23 +58,18 @@ body {
     text-decoration:none
   }
 
-
-
   .content-section {
-    background: #ffffff;
+    background: #152128;;
     padding: 10px 20px;
-    border: 1px solid #dddddd;
+    border: 1px solid rgb(37, 51, 65);
     border-radius: 3px;
     margin-bottom: 20px;
+    color: #ffffff;
   }
 
-  .article-title {
-    color: #444444;
-  }
-
-  a.article-title:hover {
-    color: #428bca;
-    text-decoration: none;
+  .article-title:hover {
+    color: #ffffff;
+    text-decoration: underline;
   }
 
   .article-content {
@@ -87,7 +85,7 @@ body {
   .article-metadata {
     padding-bottom: 1px;
     margin-bottom: 4px;
-    border-bottom: 1px solid #e3e3e3
+    border-bottom: 1px solid rgb(37, 51, 65);
   }
 
   .article-metadata a:hover {
@@ -111,4 +109,17 @@ body {
   .account-heading {
     font-size: 2.5rem;
   }
+
+
+  #deleteModal, .modal-content, .modal-header, .modal-title, .modal-footer{
+    background-color: rgb(21, 32, 43);
+  }
+  .delete-text {
+    color: rgb(136,153,166);
+  }
+  .modal-title {
+    color: #ffffff;
+  }
+
+
 
