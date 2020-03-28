@@ -6,7 +6,7 @@
             <img class="rounded-circle article-img" src="{{ url_for('static', filename='profile_pics/' + post.author.image_file) }}">
             <div class="media-body">
               <div class="article-metadata">
-                <a class="post-username" href="{{url_for('users.user_page', username=post.author.username) }}">{{ post.author.username }}</a>
+                <h5 class="username" style="text-decoration: none; color: rgb(136,153,166);"> <a stlye="color:rgb(136,153,166);" href="{{url_for('users.user_page', username=post.author.username) }}">{{ post.author.username }}</a> </h5>
                 <small class="text-muted">{{ post.date_posted.strftime('%Y-%m-%d') }}</small>
               </div>
               <h1> {{ post.game }}</h1>

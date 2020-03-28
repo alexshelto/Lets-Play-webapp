@@ -31,6 +31,7 @@ def load_user(user_id):
 # Creates the object that gets inserted into the database
 # 
 # TODO: Find a fix to change zipcode to an integer from string. needs to remail of len 5.
+# TODO: remove last name. make user only have "name" and be up to len(50)
 #
 #
 class User(db.Model, UserMixin):
