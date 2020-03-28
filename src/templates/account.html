@@ -1,22 +1,137 @@
 {% extends "layout.html" %}
 {% block content %}
 
+<!-- FONT ICON SCRIPT -->
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
 <div class="profile content-section">
   <img class="rounded-circle article-img" src="{{ url_for('static', filename='profile_pics/' + current_user.image_file) }}">
 
   <div class="profile-details-block">
+
     <div class="profile-detail">
-      <h4> {{ current_user.firstname }} {{ current_user.last_name }}</h4>
+      <!--  Make conditional for first and last name so "NONE" is not displayed-->
+      {% if current_user.firstname %}
+        <h4> {{ current_user.firstname }} {{ current_user.last_name }}</h4>
+      {% endif %}
+    </div>
+
+    <div class="profile-detail">
+      <h6 class="username"> @{{ current_user.username }} </h6>
+    </div>
+
+    <div class="profile-detail">
+      <h6 class="user-details">
+        Zipcode: {{ current_user.zipcode }}
+      </h6>
+    </div>
+
+    <div class="profile-detail">
+      <h6 class="user-details">
+        <i style='font-size:20px' class='far'>&#xf073;</i> Joined: #TODO: add new column in db
+    </div>
+    
+    <div class="bio-block">
+      {% if current_user.bio %}
+        <p class="bio-text"> {{ current_user.bio }}</p>
+      {% else %}
+        <p class="bio-text">Currently no bio</p>
+       {% endif %} 
     </div>
 
   </div>
 
 
+  <!--Modal: Login with Avatar Form-->
+  <div class="edit-account-modal">
+    <div class="modal fade" id="editProfileModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog cascading-modal modal-avatar modal-sm" role="document">
+      <!--Content-->
+      <div class="modal-content">
+
+        <!--Header-->
+        <div class="modal-header">
+          <img src="{{ url_for('static', filename='profile_pics/' + current_user.image_file) }}" alt="avatar" class="rounded-circle img-responsive">
+        </div>
+        <!--Body-->
+        <div class="modal-body text-center mb-1">
+
+          <h5 class="mt-1 mb-2"> {{ current_user.firstname }}</h5>
+
+          <div class="md-form ml-0 mr-0">
+            <input type="password" type="text" id="form29" class="form-control form-control-sm validate ml-0">
+            <label data-error="wrong" data-success="right" for="form29" class="ml-0">Enter password</label>
+          </div>
+
+          <div class="text-center mt-4">
+            <button class="btn btn-cyan mt-1">Login <i class="fas fa-sign-in ml-1"></i></button>
+          </div>
+        </div>
+
+      </div>
+      <!--/.Content-->
+    </div>
+    </div>
+    <!--Modal: Login with Avatar Form-->
+
+    <div class="edit-profile-btn">
+      <button type="button" class="btn btn-warning btn-sm m-1" data-toggle="modal" data-target="#editProfileModal">Edit Profile</button>
+    </div>
+  </div>
 
 
 
-</div>
+</div> <!--End profile details-->
 
+
+{% for post in posts.items %}
+        <article class="media content-section">
+            <img class="rounded-circle article-img" src="{{ url_for('static', filename='profile_pics/' + post.author.image_file) }}">
+            <div class="media-body">
+              <div class="article-metadata">
+                <h5 class="username" style="text-decoration: none; color: rgb(136,153,166);"> <a stlye="color:rgb(136,153,166);" href="{{url_for('users.user_page', username=post.author.username) }}">{{ post.author.username }}</a> </h5>
+                <small class="text-muted">{{ post.date_posted.strftime('%Y-%m-%d') }}</small>
+              </div>
+              <h1> {{ post.game }}</h1>
+              <h2><a class="article-title" href="{{url_for('posts.post', post_id=post.id )}}">{{ post.title }}</a></h2>
+              <p class="article-content">{{ post.content }}</p>
+            </div>
+
+            {% if post.author == current_user %}
+            <div>
+                <button type="button" class="btn btn-danger btn-sm m-1" data-toggle="modal" data-target="#deleteModal">Delete</button>
+            </div>
+        {% endif %}
+        </article>
+
+
+        <!-- Delete Modal -->
+
+        <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModal" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="deleteModal"> Delete Post?</h5>
+              </div>
+              <div class="modal-body">
+                <p class="delete-text" >This can't be undone and it will be removed from your profile and the timeline </p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <form action="{{url_for('posts.delete_post', post_id=post.id) }}" method="POST">
+                    <input class="btn btn-danger" type="submit" value="Delete">
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+ {% endfor %}
+<!-- SHOW POSTS BY USER -->
 
 
 {% endblock %}

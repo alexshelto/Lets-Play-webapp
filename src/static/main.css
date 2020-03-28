@@ -125,3 +125,22 @@ body {
   }
 
 
+
+/* Profile page CSS
+        TODO: Style profile content css 
+        
+        
+        */
+
+  .username, .user-details {
+    color: rgb(136,153,166) !important;
+  }
+
+  .edit-profile-btn{
+    position: absolute;
+    top: 0px;
+    right: 15px;
+    color: rgb(80,216,215) !important;
+  }
+
+

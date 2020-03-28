@@ -19,10 +19,7 @@ bcrypt = Bcrypt()#initialiaing hashing
 login_manager = LoginManager()#login manager so users can log in
 login_manager.login_view = 'users.login' ##passing in function name of route if user isnt logged in
 login_manager.login_message_category = 'warning' #warning = yellow color
-
-
 mail = Mail() #initialize
-
 
 
 

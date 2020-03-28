@@ -83,10 +83,15 @@ def logout():
 
 
 
+
+
+#TODO: make posts query from newest to oldest instead of oldest to newest 
 @users.route("/account", methods=['GET', 'POST'])
 @login_required
 def account():
-    return render_template("account.html")
+    page = request.args.get('page',1, type=int)
+    posts = Post.query.filter_by(user_id=current_user.id).paginate(page=page,per_page=5)##posts per page:
+    return render_template("account.html", posts=posts)
 
 
 
