@@ -62,7 +62,8 @@ $ FLASK_DEBUG=True flask run
 Windows Command Prompt:
 ```
 C:\your\path>set FLASK_APP=run.py
-set FLASK_DEBUG=True flask run
+set FLASK_DEBUG=True 
+flask run
 ```
 
 

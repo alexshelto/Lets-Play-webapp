@@ -41,3 +41,19 @@ March 10, 2020
 
 March 14, 2020
     No meeting was held due to Spring Break being extended and classes being moved to online
+
+March 17, 2020
+    No meeting was held due to Spring Break
+
+March 21, 2020
+    No meeting was held due to Spring Break
+
+March 24, 2020
+    During our meeting it was discussed whether we would continue to our project or change it. It was decided to continue on, albiet possibly scale the project back 
+    in anticipation of any troubles we could encounter due to not being able to meet in person.
+
+March 28, 2020
+    The meeting consisted of us discussing what was still needed. It was decided that our landing page needed more detail and user interface. Currently it still 
+    needs to link to the about and contact pages. Posts by users would need more interaction as well, such as possibly commenting on them or allowing users to enter 
+    a group chat of sorts when connecting through posts. We have been discussing how to implement those ideas. Finally we through around idea for how to customize
+    profile pages. Including allowing pictures, bios, interests, and other customization options.
