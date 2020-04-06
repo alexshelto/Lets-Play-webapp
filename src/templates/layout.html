@@ -49,7 +49,10 @@
 
                   <a class="nav-bar-item" href="{{ url_for('posts.new_post') }}">New Post </a>
                 {% endif %}
-            
+            <!-- About us page -->      
+             <div class="collapse navbar-collapse" id="navbarToggle"> 
+                <a class="nav-bar-item" href="{{ url_for('main.about') }}">About</a>
+                </div>  
 
                 <!--- add in a if user is authenticated for python browser programming-->
                 </div>
