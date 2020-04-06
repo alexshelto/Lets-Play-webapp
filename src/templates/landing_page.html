@@ -6,18 +6,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/landing_page.css">
-  
+
     <title>Lets Play</title>
 </head>
 <body>
 
-    
-    {% block content %}
+<style>
+  p {
+    font-weight: bold;
+    font-size: 16pt;
+  }
+
+  h1 {
+    color: rgb(80,216,215);
+    font-size: 34pt;
+    position: relative;
+    bottom: 100px;
+  }
+</style>
+
+{% block content %}
 
     <!-- Left split screen -->
     <div class="split left">
         <div class="centered">
-          <h2>Left Side</h2>
+          <img src= "/static/misc_images/NaiveMonsterDoodle.jpeg" width="100%" style="transform: rotate(90deg);">
+          <h2><br>Naive Monster</h2>
+          <p>Looking for friends or people who share your hobbies?
+          <br>Then sign up for Let's Play and start meeting interesting and fantastic people!</p> 
         </div>
       </div>
       
@@ -28,7 +44,7 @@
 
 
         <div class="centered">
-
+          <h1>LET'S PLAY</h1>
             <div class="register-content">
                 <a class="login-register-button" href="{{ url_for('users.register')}} ">Register</a>
             </div>

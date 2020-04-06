@@ -57,3 +57,11 @@ March 28, 2020
     needs to link to the about and contact pages. Posts by users would need more interaction as well, such as possibly commenting on them or allowing users to enter 
     a group chat of sorts when connecting through posts. We have been discussing how to implement those ideas. Finally we through around idea for how to customize
     profile pages. Including allowing pictures, bios, interests, and other customization options.
+
+March 31, 2020
+    Design ideas for the landing page were discussed. It was decided to put a logo on the left, as well as a sort of brief synopsis or hook under neath it that
+    briefly explains the website. There were discussion about getting rid of the contact_us page, but ultimate it was decided to keep it.
+
+April 4, 2020
+    Discussions on the to do list were held. We began to discuss how we would like for users to communicate, and if we would be able to learn socketing on our own. 
+    Other features for users like profile pictures, and what other activites we would like to add were also discussed.
