@@ -65,3 +65,12 @@ March 31, 2020
 April 4, 2020
     Discussions on the to do list were held. We began to discuss how we would like for users to communicate, and if we would be able to learn socketing on our own. 
     Other features for users like profile pictures, and what other activites we would like to add were also discussed.
+
+April 7, 2020
+    It was decided to shelve the socketing idea, and find another way to users to communicate on the site. Some activites, like more sports such as football, and 
+    games like Fortnite were agreed upon. Ideas for a sidebar, as well as a possible search bar were discuessed.
+
+April 11, 2020
+    Final ideas and preparations were beginning to be made. Since their is only a little over a week of time left to work on the site it was discuessed what the
+    most important ideas and implementations were. Anything that wasn't deemed important enough would be thrown out in favor of having a more ready, if slightly
+    stripped down, website.
