@@ -10,8 +10,7 @@ from wtforms.validators import DataRequired
 
 
 
-Game_Choices = [('bball', 'Basketball'), ('cod', 'Call of Duty'), ('dd', 'Dungeons & Dragons')]
-
+Game_Choices = [('bball', 'Basketball'), ('cod', 'Call of Duty'), ('dd', 'Dungeons & Dragons'), ('vol', 'Volleyball'), ('fb', 'Football'), ('ha', 'Halo'), ('ft', 'Fortnite'), ('al', 'Apex Legends'), ('sb', 'Smash Brothers'), ('bb', 'Baseball'), ('bg', 'Board Games'), ('mg', 'Misc. Games')]
 
 
 class PostForm(FlaskForm):
