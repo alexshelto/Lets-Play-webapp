@@ -4,8 +4,7 @@
 #
 #
 #
-from flask import (render_template, url_for, flash,
-                   redirect, request, abort, Blueprint)
+from flask import (render_template, url_for, flash, redirect, request, abort, Blueprint)
 from flask_login import login_user, current_user, logout_user, login_required
 from src import db, bcrypt
 from src.models import Post, User
