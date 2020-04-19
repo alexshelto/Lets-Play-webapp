@@ -47,12 +47,6 @@ def new_post():
     return render_template('create_post.html', title='New Post', form=form, legend="New Post", games=Game_Choices) #removed games=game_display
 
 
-
-
-
-
-
-
 @posts.route("/post/<int:post_id>")
 def post(post_id):
     post = Post.query.get_or_404(post_id)
@@ -73,3 +67,4 @@ def delete_post(post_id):
     db.session.commit()
     flash('Your post has been deleted!', 'success')
     return redirect(url_for('main.home'))
+    
