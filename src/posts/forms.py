@@ -9,7 +9,7 @@ from wtforms.validators import DataRequired
 
 
 
-Game_Choices = [('al', 'Apex Legends'), ('arma', "Arma 3"), ('bb', 'Baseball'),('bball', 'Basketball'),('bg', 'Board Games'),('cod', 'Call of Duty'), ('csgo', "Counter-Strike: Global Offensive"), ('dayz', 'DayZ'), ('dd', 'Dungeons & Dragons'),('ft', 'Fortnite'), ('fb', 'Football'), ('gmod', 'Garry\'s Mod'),('ha', 'Halo'), ('lol', "League of Legends"), ('mg', 'Misc. Games'), ("rust", 'Rust'), ('sb', 'Smash Brothers'), ('val', 'Valorant'), ('vol', 'Volleyball'), ('wow', 'World of Warcraft')] 
+Game_Choices = [('al', 'Apex Legends'),('arma', 'Arma 3'),('bb', 'Baseball'),('bball', 'Basketball'),('bil', 'Billiards'),('bg', 'Board Games'),('cod', 'Call of Duty'),('csgo', 'Counter-Strike: Global Offensive'),('dayz', 'DayZ'),('dd', 'Dungeons & Dragons'),('db', 'Dodgeball'),('ft', 'Fortnite'),('fb', 'Football'),('gmod', 'Garry\'s Mod'),('ha', 'Halo'),('hi', 'Hiking'),('kb', 'Kickball'),('lol', 'League of Legends'),('mg', 'Misc. Games'),('rust', 'Rust'),('sb', 'Smash Brothers'),('val', 'Valorant'),('vol', 'Volleyball'),('wow', 'World of Warcraft')] 
 
 class PostForm(FlaskForm):
     game = SelectField('Game',[DataRequired()], choices=Game_Choices)
