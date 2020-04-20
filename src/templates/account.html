@@ -4,6 +4,72 @@
 <!-- FONT ICON SCRIPT -->
 <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 
+<form method="POST" action="" enctype="multipart/form-data">
+  {{ form.hidden_tag() }}
+  <fieldset class="form-group">
+      <legend class="border-bottom mb-4"><h3>Change Account Info</h3></legend>
+      <div class="form-group" >
+           <h4>{{ form.username.label(class="form-control-label") }}</h4>
+
+          {% if form.username.errors %}
+              {{ form.username(class="form-control form-control-lg is-invalid") }}
+              <div class="invalid-feedback">
+                  {% for error in form.username.errors %}
+                      <span>{{ error }}</span>
+                  {% endfor %}
+              </div>
+          {% else %}
+              {{ form.username(class="form-control form-control-lg") }}
+          {% endif %}
+      </div>
+      <div class="form-group">
+         <h4>{{ form.email.label(class="form-control-label") }}</h4>
+          {% if form.email.errors %}
+              {{ form.email(class="form-control form-control-lg is-invalid") }}
+              <div class="invalid-feedback">
+                  {% for error in form.email.errors %}
+                      <span>{{ error }}</span>
+                  {% endfor %}
+              </div>
+          {% else %}
+              {{ form.email(class="form-control form-control-lg") }}
+          {% endif %}
+      </div>
+
+      <div class="form-group">
+        <h4>{{ form.bio.label(class="form-control-label") }}</h4>
+         {% if form.bio.errors %}
+             {{ form.bio(class="form-control form-control-lg is-invalid") }}
+             <div class="invalid-feedback">
+                 {% for error in form.bio.errors %}
+                     <span>{{ error }}</span>
+                 {% endfor %}
+             </div>
+         {% else %}
+             {{ form.bio(class="form-control form-control-lg") }}
+         {% endif %}
+     </div>
+
+     
+
+
+      <div class="form-group">
+             <h4> {{ form.picture.label() }} </h4>
+              {{ form.picture(class="form-control-file") }}
+              {% if form.picture.errors %}
+                  {% for error in form.picture.errors%}
+                      <span class="text-danger">{{ error }}</span> </br>
+                  {% endfor %}
+              {% endif %}
+      </div>
+  </fieldset>
+  <div class="form-group">
+      {{ form.submit(class="btn btn-outline-info") }}
+  </div>
+</form>
+
+
+
 <div class="profile content-section">
   <img class="rounded-circle article-img" src="{{ url_for('static', filename='profile_pics/' + current_user.image_file) }}">
 
@@ -26,10 +92,10 @@
       </h6>
     </div>
 
-    <div class="profile-detail">
+    <!-- <div class="profile-detail">
       <h6 class="user-details">
         <i style='font-size:20px' class='far'>&#xf073;</i> Joined: #TODO: add new column in db
-    </div>
+    </div> -->
     
     <div class="bio-block">
       {% if current_user.bio %}
@@ -41,48 +107,9 @@
 
   </div>
 
-
-  <!--Modal: Login with Avatar Form-->
-  <div class="edit-account-modal">
-    <div class="modal fade" id="editProfileModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog cascading-modal modal-avatar modal-sm" role="document">
-      <!--Content-->
-      <div class="modal-content">
-
-        <!--Header-->
-        <div class="modal-header">
-          <img src="{{ url_for('static', filename='profile_pics/' + current_user.image_file) }}" alt="avatar" class="rounded-circle img-responsive">
-        </div>
-        <!--Body-->
-        <div class="modal-body text-center mb-1">
-
-          <h5 class="mt-1 mb-2"> {{ current_user.firstname }}</h5>
-
-          <div class="md-form ml-0 mr-0">
-            <input type="password" type="text" id="form29" class="form-control form-control-sm validate ml-0">
-            <label data-error="wrong" data-success="right" for="form29" class="ml-0">Enter password</label>
-          </div>
-
-          <div class="text-center mt-4">
-            <button class="btn btn-cyan mt-1"> <p style="color: rgb(80, 216, 215);">Login</p> <i class="fas fa-sign-in ml-1"></i></button>
-          </div>
-        </div>
-
-      </div>
-      <!--/.Content-->
-    </div>
-    </div>
-    <!--Modal: Login with Avatar Form-->
-
-    <div class="edit-profile-btn">
-      <button type="button" class="btn btn-warning btn-sm m-1" data-toggle="modal" data-target="#editProfileModal">Edit Profile</button>
-    </div>
-  </div>
+  
 
 
-
-</div> <!--End profile details-->
 
 
 {% for post in posts.items %}
