@@ -75,7 +75,23 @@ class Post(db.Model):
     date_posted = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
     content = db.Column(db.Text, nullable=False)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+    comment = db.relationship('Comment', backref='article', lazy=True)
+
 
     #How uPost is displayed
     def __repr__(self):
         return f"Post('{self.title}', '{self.date_posted}')"
+
+
+#Comment Database model:
+#
+#
+#
+#
+class Comment(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    body = db.Column(db.String(100), nullable=False)
+    date_posted = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
+    user_id = db.Column(db.Integer, db.ForeignKey('post.id'), nullable=False)
+    def __repr__(self):
+        return f"Comment('{self.body}', '{self.date_posted}')"

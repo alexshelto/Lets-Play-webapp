@@ -10,8 +10,9 @@ from flask import render_template, request, Blueprint, flash, redirect, url_for
 from flask_login import login_user, current_user, logout_user, login_required
 from datetime import datetime
 from src import db
-from src.models import Post
-from src.posts.forms import PostForm, Game_Choices #importing the post form and the available game choices 
+from src.models import Post, Comment
+from src.posts.forms import PostForm, Game_Choices #importing the post form and the available game choices
+from src.posts.forms import AddCommentForm #importing the comment form 
 # querying
 import sqlite3
 from sqlite3 import Error
@@ -47,11 +48,35 @@ def new_post():
     return render_template('create_post.html', title='New Post', form=form, legend="New Post", games=Game_Choices) #removed games=game_display
 
 
+
 @posts.route("/post/<int:post_id>")
 def post(post_id):
     post = Post.query.get_or_404(post_id)
     return render_template('post.html', title=post.title, post=post)
 
+
+
+@posts.route("/post/<int:post_id>/comment", methods=["GET", "POST"])
+@login_required
+def comment_post(post_id):
+    #post = Post.query.get_or_404(post_id)
+    form = AddCommentForm()
+    if form.validate_on_submit():
+        #db.create_all()
+        comment = Comment(body=form.body.data, article=post)
+        db.session.add(comment)
+        db.session.commit()
+        flash("Your comment has been added to the post", "success")
+        return redirect(url_for("post", post_id=post.id))
+    return render_template('post.html', title="Comment", form=form)
+
+
+
+@posts.route("/post/<int:post_id>/comment", methods=["GET", "POST"])
+@login_required
+def comment(post_id):
+    post = Post.query.get_or_404(post_id)
+    return render_template('post.html', title="Comment", comment=comment)
 
 
 
@@ -66,5 +91,17 @@ def delete_post(post_id):
     db.session.delete(post)
     db.session.commit()
     flash('Your post has been deleted!', 'success')
+    return redirect(url_for('main.home'))
+
+
+@posts.route("/post/<int:post_id>/delete", methods=['POST'])
+@login_required #need to be logged in to update a post
+def delete_comment(post_id):
+    post = Post.query.get_or_404(post_id)
+    if comment.author != current_user:
+       abort(403)
+    db.session.delete(comment)
+    db.session.commit()
+    flash('Your comment has been deleted!', 'success')
     return redirect(url_for('main.home'))
     
