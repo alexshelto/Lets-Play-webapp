@@ -74,3 +74,11 @@ April 11, 2020
     Final ideas and preparations were beginning to be made. Since their is only a little over a week of time left to work on the site it was discuessed what the
     most important ideas and implementations were. Anything that wasn't deemed important enough would be thrown out in favor of having a more ready, if slightly
     stripped down, website.
+
+April 13, 2020
+    There was a very short meeting consisting of talking about some ideas that could to be done. While the website is in a usable state, it could probably use
+    some quality of life features that would make it more appealing and helpful, such as bios, profile pictures, and comments
+
+April 18, 2020
+    The meeting mostly stood as a progress update of what was about to happen. Completion the bios and profile pics were done, and how to implement comments was
+    also discuessed
